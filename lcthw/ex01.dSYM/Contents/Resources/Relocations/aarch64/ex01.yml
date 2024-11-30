@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/jakubzuchowski/c/lcthw/ex01'
+relocations:     []
+...
