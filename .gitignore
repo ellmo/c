@@ -1,3 +1,14 @@
+# ignore all files
+*
+# ...but UNignore directories
+!*/
+# ...and UNignore files with extensions
+!*.*
+
+# UNignore Makfefiles
+!Makefile
+
+# ignore all the usual chaff and compiled files
 .DS_Store
 *.out
 *.dSYM
