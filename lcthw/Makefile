@@ -13,3 +13,6 @@ clean:
 
 03:
 	cc ex03/ex03.c -o ./03
+
+10:
+	cc ex10/ex10.c -o ./10
