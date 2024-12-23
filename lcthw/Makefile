@@ -9,4 +9,7 @@ clean:
 	cc ex01/ex01.c -o ./01
 
 02:
-	cc ex01/ex02.c -o ./02
+	cc ex02/ex02.c -o ./02
+
+03:
+	cc ex03/ex03.c -o ./03
