@@ -44,5 +44,6 @@ void print_letters(char arg[])
 
 int can_print_it(char ch)
 {
+    // (int)ch is typecasting the value of `ch` var to int
     return isalpha((int)ch) || isblank((int)ch);
 }
