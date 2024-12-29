@@ -1,11 +1,18 @@
 CFLAGS=-Wall -g
 
+.PHONY: last
+last: clean
+	@echo "~~   COMPILING LAST:"
+# list *.c files in any underlying directory, sort by last updated, take first, iterate, compile
+	@ls -t **/*.c | head -1 | while read file; do cc $$file -o last.out; done
+	@echo "  + Compiled last.out"
+
 .PHONY: clean
 clean:
-	@echo "    CLEANING UP"
-	@echo "=== Removing files with 'out' extension."
+	@echo "~~  CLEANING UP:"
+	@echo "  - Removing files with 'out' extension."
 	@rm -f *.out
-	@echo "=== Removing files named with two digits."
+	@echo "  - Removing files named with two digits."
 	@rm -f [0-9][0-9]
 
 01:
