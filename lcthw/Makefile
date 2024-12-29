@@ -2,8 +2,11 @@ CFLAGS=-Wall -g
 
 .PHONY: clean
 clean:
-	rm -f *.out
-	rm -f [0-9][0-9]
+	@echo "    CLEANING UP"
+	@echo "=== Removing files with 'out' extension."
+	@rm -f *.out
+	@echo "=== Removing files named with two digits."
+	@rm -f [0-9][0-9]
 
 01:
 	cc ex01/ex01.c -o ./01
