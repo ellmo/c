@@ -25,3 +25,6 @@ clean:
 
 12:
 	cc ex12/ex12.c -o ./12
+
+13:
+	cc ex13/ex13.c -o ./13
