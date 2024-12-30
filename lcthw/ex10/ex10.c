@@ -4,7 +4,8 @@
   argc is the number of arguments, argv is a table that holds all of them.
   Do note that argv[0] is always going to be the file name, so your first argument is argv[1].
 */
-int main(int argc, char *argv[])
+int
+main(int argc, char* argv[])
 {
 
     if (argc != 2) {

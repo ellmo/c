@@ -1,0 +1,41 @@
+BasedOnStyle: Mozilla
+IndentWidth: 4
+UseTab: Never
+ColumnLimit: 100
+
+# -- comment aligning
+AlignTrailingComments:
+  Kind: Always
+SpacesBeforeTrailingComments: 1
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+
+# -- declaration aligning
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+# AlignConsecutiveDeclarations: AcrossEmptyLines
+
+# -- argument aligning
+BinPackArguments: true
+AllowAllArgumentsOnNextLine: true
+
+# -- block breaking
+AllowShortIfStatementsOnASingleLine: true
+# BreakBeforeBraces: Custom
+# BraceWrapping:
+#   AfterClass: true # false
+#   AfterCaseLabel: false
+#   AfterControlStatement: false
+#   AfterEnum: false
+#   AfterFunction: true # false
+#   AfterNamespace: true # false
+#   AfterStruct: false
+#   AfterExternBlock: false
+#   BeforeElse: false
+#   BeforeCatch: false
+
+# BreakArrays: true # -- currently only for JSON formatting
+BreakStringLiterals: true
