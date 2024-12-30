@@ -9,9 +9,12 @@ or linker can find them later in the code.
 
     Comment them out, see what happens.
 */
-void print_arguments(int argc, char *argv[]);
+
+// clang-format off
+void print_arguments(int argc, char* argv[]);
 void print_letters(char arg[]);
-int can_print_it(char ch);
+int  can_print_it(char ch);
+// clang-format on
 
 int main(int argc, char *argv[])
 {
