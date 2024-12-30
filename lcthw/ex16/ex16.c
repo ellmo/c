@@ -6,9 +6,9 @@
 struct Person
 {
     char* name;
-    int age;
-    int height;
-    int weight;
+    int   age;
+    int   height;
+    int   weight;
 };
 
 // declaring a function that returns a pointer to Person struct
