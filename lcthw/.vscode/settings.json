@@ -2,7 +2,6 @@
   "files.associations": {
     "*.Deployfile": "yaml",
     "*.makefile": "makefile",
-    "assert.h": "c",
-    "_assert.h": "c"
+    "*.clang-format": "yaml",
   }
 }
