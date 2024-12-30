@@ -1,11 +1,12 @@
-BasedOnStyle: Mozilla
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+BasedOnStyle: Mozilla # https://firefox-source-docs.mozilla.org/code-quality/coding-style/coding_style_cpp.html#formatting-code
 IndentWidth: 4
 UseTab: Never
 ColumnLimit: 100
 
 # -- comment aligning
 AlignTrailingComments:
-  Kind: Always
+  Kind: Leave
 SpacesBeforeTrailingComments: 1
 SpacesInLineCommentPrefix:
   Minimum: 1
