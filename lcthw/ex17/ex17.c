@@ -54,6 +54,10 @@ Database_load(struct Connection* conn)
 struct Connection*
 Database_open(const char* filename, char mode)
 {
+    /*
+        Allocating large data on the heap: The whole point of this program is using `malloc` to ask
+    the OS for a large amount of memory when I create the Database.
+    */
     struct Connection* conn = malloc(sizeof(struct Connection));
     if (!conn) die("Memory error");
 
@@ -139,9 +143,17 @@ Database_get(struct Connection* conn, int id)
     }
 }
 
+// This does NOT delete the database, it "deletes" a record by "zero-ing" it
 void
 Database_delete(struct Connection* conn, int id)
 {
+    /*
+        Using a temporary local Address, initializing its id and set fields, and then simply copying
+    it into the rows array by assigning it to the element I want. This trick makes sure that all
+    fields except set and id are initialized to zeros and it's actually easier to write.
+    Incidentally, you shouldn't be using memcpy to do these kinds of struct copying operations.
+    Modern C allows you to simply assign one struct to another and it'll handle the copying for you.
+    */
     struct Address addr = { .id = id, .set = 0 };
     conn->db->rows[id] = addr;
 }
@@ -170,6 +182,10 @@ main(int argc, char* argv[])
     struct Connection* conn = Database_open(filename, action);
     int                id = 0;
 
+    /*
+        Using `atoi` function to take the string for the id on the command line and convert it to
+    the int id variable. Read up on this and similar functions.
+    */
     if (argc > 3) id = atoi(argv[3]);
     if (id >= MAX_ROWS) die("There's not that many records.");
 
