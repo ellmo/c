@@ -44,3 +44,18 @@ clean:
 
 14:
 	cc ex14/ex14.c -o ./14
+
+15:
+	cc ex15/ex15.c -o ./15
+
+16:
+	cc ex16/ex16.c -o ./16
+
+17:
+	cc ex17/ex17.c -o ./17
+
+18:
+	cc ex18/ex18.c -o ./18
+
+19:
+	cc ex19/ex19.c -o ./19
